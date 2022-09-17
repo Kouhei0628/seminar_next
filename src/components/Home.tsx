@@ -35,15 +35,11 @@ const Home: React.FC = () => {
     return () => window.clearTimeout(time);
   }, [ref]);
   return (
-    <LoadingContext.Provider value={[isLoaded, setIsLoaded]}>
-      <RefContext.Provider value={ref}>
-        <SetRefContext.Provider value={setRef}>
-          <Loading />
-          <FixNavigation />
-          <Main />
-        </SetRefContext.Provider>
-      </RefContext.Provider>
-    </LoadingContext.Provider>
+    <>
+      <Loading />
+      <FixNavigation />
+      <Main />
+    </>
   );
 };
 export default Home;
