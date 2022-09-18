@@ -1,6 +1,6 @@
 import { LoadingProvider } from "../context/LoadingContext";
 import { NaviProvider } from "../context/NaviContext";
-import "/styles/globals.css";
+import "../../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (

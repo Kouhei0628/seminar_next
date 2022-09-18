@@ -1,9 +1,9 @@
-import styled from "styled-components";
 import StoryEachText from "./StoryEachText";
+import style from "../../../styles/StoryText.module.scss";
 
 const StoryText: React.FC = () => {
   return (
-    <TextWrap>
+    <p className={style.wrap}>
       <StoryEachText key={1}>私はヴェルスラミナに通う生徒。</StoryEachText>
       <br className='text-sep' />
       <br className='text-sep' />
@@ -56,20 +56,7 @@ const StoryText: React.FC = () => {
         <br />
         財産を盗むことだった。
       </StoryEachText>
-    </TextWrap>
+    </p>
   );
 };
 export default StoryText;
-
-const TextWrap = styled.p`
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  font-size: calc(9px + 0.5vw);
-  font-weight: 700;
-  .text-sep {
-    display: block;
-    content: "";
-    margin: 10px 0;
-  }
-`;

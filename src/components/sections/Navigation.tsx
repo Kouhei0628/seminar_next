@@ -15,6 +15,8 @@ const Navigation: React.FC = () => {
           {navImages.map(ni => (
             <li key={ni.id}>
               <Scroll
+                className='scroll'
+                style={{ position: "relative" }}
                 to={`/#${ni.ref}`}
                 onClick={() => setRef(ni.ref)}
                 smooth={true}>

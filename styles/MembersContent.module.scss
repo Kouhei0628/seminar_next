@@ -1,0 +1,16 @@
+.content {
+    margin-top: 30px;
+}
+
+.list {
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 1024px) {
+        width: 58%;
+    }
+}

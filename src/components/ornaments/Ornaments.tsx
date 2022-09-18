@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Gears from "./Gears";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import style from "../../../styles/Ornaments.module.scss";
 
 const Ornaments = React.memo(() => {
   const gearAmount: string[] = [...Array(100).fill("")];
@@ -19,63 +20,38 @@ const Ornaments = React.memo(() => {
     gsap.registerPlugin(ScrollTrigger);
     const tlA = gsap.timeline(option);
     tlA.fromTo(
-      ".ornInnL",
+      ".innerL",
       { transform: "translateX(-100%)" },
       { transform: "translateX(0%)" }
     );
     const tlB = gsap.timeline(option);
     tlB.fromTo(
-      ".ornInnR",
+      ".innerR",
       { transform: "translateX(100%)" },
       { transform: "translateX(30%)" }
     );
   });
   return (
     <>
-      <OrnamentsL className='ornaments-l'>
-        <OrnamentWrap className='ornWrapL'>
-          <OrnamentInner className='ornInnL'>
+      <div className={style.ornaments__l}>
+        <div className={style.ornaments__wrap}>
+          <div className={`innerL ${style.ornaments__inner}`}>
             {gearAmount.map((_, i) => (
               <Gears key={i} isLeft />
             ))}
-          </OrnamentInner>
-        </OrnamentWrap>
-      </OrnamentsL>
-      <OrnamentsR className='ornaments-r'>
-        <OrnamentWrap className='ornWrapR'>
-          <OrnamentInner className='ornInnR'>
+          </div>
+        </div>
+      </div>
+      <div className={style.ornaments__r}>
+        <div className={style.ornaments__wrap}>
+          <div className={`innerR ${style.ornaments__inner}`}>
             {gearAmount.map((_, i) => (
               <Gears key={i} />
             ))}
-          </OrnamentInner>
-        </OrnamentWrap>
-      </OrnamentsR>
+          </div>
+        </div>
+      </div>
     </>
   );
 });
 export default Ornaments;
-
-const OrnamentsL = styled.div`
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0%;
-  width: 250px;
-  height: 100%;
-  overflow: hidden;
-`;
-const OrnamentsR = styled(OrnamentsL)`
-  left: unset;
-  right: 0;
-`;
-const OrnamentWrap = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-`;
-const OrnamentInner = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-`;

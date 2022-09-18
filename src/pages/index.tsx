@@ -1,4 +1,3 @@
-import { Head, Html } from "next/document";
 import { useContext, useEffect } from "react";
 import FixNavigation from "../components/FixNavigation";
 import HeadTag from "../components/HeadTag";
