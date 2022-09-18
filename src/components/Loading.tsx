@@ -1,16 +1,23 @@
+import Image from "next/image";
 import { useContext } from "react";
 import styled from "styled-components";
 import { LoadingContext } from "../context/LoadingContext";
+import style from "../../styles/Loading.module.scss";
 
 const Loading: React.FC = () => {
   const [isLoaded] = useContext(LoadingContext);
   return (
-    <LoadWrap className={`${isLoaded ? "hidden" : ""}`}>
+    <div className={style.wrap + `${isLoaded ? "hidden" : ""}`}>
       <div>
-        <img src={`/img/header/header_logo.png`} alt={`ロード中のロゴ`} />
+        <Image
+          width={1415}
+          height={714}
+          src={`/img/header/header_logo.png`}
+          alt={`ロード中のロゴ`}
+        />
       </div>
       <h2>Loading...</h2>
-    </LoadWrap>
+    </div>
   );
 };
 export default Loading;

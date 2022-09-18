@@ -1,11 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Link as Scroll } from "react-scroll";
 import { useContext } from "react";
-import styled from "styled-components";
-import { breakpoints } from "../../breakpoints/breakpoints";
 import { NaviContext } from "../../context/NaviContext";
 import navImages from "../../data/mainNav-img";
 import style from "../../../styles/Navigation.module.scss";
-import Image from "next/image";
 
 const Navigation: React.FC = () => {
   const [, setRef] = useContext(NaviContext);
@@ -15,20 +14,17 @@ const Navigation: React.FC = () => {
         <ul className={style.list}>
           {navImages.map(ni => (
             <li key={ni.id}>
-              <button
+              <Scroll
+                to={`/#${ni.ref}`}
                 onClick={() => setRef(ni.ref)}
-                style={{ width: "100%", height: "100%" }}>
-                <Link href={`/#${ni.ref}`}>
-                  <a>
-                    <Image
-                      layout='fill'
-                      className={style.navIcon}
-                      src={`/img/navigation/nav_${ni.ref}.png`}
-                      alt={ni.alt}
-                    />
-                  </a>
-                </Link>
-              </button>
+                smooth={true}>
+                <Image
+                  layout='fill'
+                  className={style.navIcon}
+                  src={`/img/navigation/nav_${ni.ref}.png`}
+                  alt={ni.alt}
+                />
+              </Scroll>
             </li>
           ))}
         </ul>
