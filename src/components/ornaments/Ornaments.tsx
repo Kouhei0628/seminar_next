@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import Gears from "./Gears";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const Ornaments = React.memo(() => {
   const gearAmount: string[] = [...Array(100).fill("")];
