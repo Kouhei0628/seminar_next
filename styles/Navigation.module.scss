@@ -40,6 +40,11 @@
         height: 137px;
         border-radius: 50%;
         transition: all 0.2s linear;
+        a {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
         &:hover {
             transform: scale(1.1);
             img {

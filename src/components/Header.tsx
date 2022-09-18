@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { useContext } from "react";
 import styled from "styled-components";
@@ -14,7 +15,10 @@ const Header: React.FC = React.memo(() => {
       <HeaderWrap onLoad={() => setIsLoaded(true)}>
         <TopmostCloud />
         <ProvVisual>
-          <img
+          <Image
+            layout='responsive'
+            width={3600}
+            height={1800}
             className={`${isLoaded ? "visible" : ""}`}
             src={`/img/header/header_main.png?ver=1.0.2`}
             alt='メインヴィジュアル'
@@ -29,12 +33,18 @@ const Header: React.FC = React.memo(() => {
           <CloudBottom />
         </CloudWrap>
         <HeaderVisual>
-          <img
+          <Image
+            layout='responsive'
+            width={3600}
+            height={1800}
             className={`header_visual ${isLoaded ? "visible" : ""}`}
             src={`/img/header/header_main.png?ver=1.0.2`}
             alt='メインヴィジュアル'
           />
-          <img
+          <Image
+            layout='responsive'
+            width={804}
+            height={208}
             className='blur'
             src={`/img/header/header_blur.png?ver=1.0.2`}
             alt='ぼかし画像'
@@ -162,6 +172,9 @@ const ProvVisual = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+  span {
+    position: unset;
+  }
   img {
     height: 100%;
     margin: 0 auto;
