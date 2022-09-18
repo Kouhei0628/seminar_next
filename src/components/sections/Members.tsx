@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colors } from "../../data/colors";
-import { PubUrl } from "../../data/PubUrl";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import MembersContent from "./MembersContent";
 import { CloudTop, CloudWrap } from "./Summary";
@@ -30,7 +29,7 @@ const MembersSection = styled.section`
 `;
 const CWrap = styled(CloudWrap)``;
 const CTop = styled(CloudTop)`
-  background-image: url(${PubUrl}/img/members/members_bg-top.png);
+  background-image: url(/img/members/members_bg-top.png);
 `;
 const MembersWrap = styled.div`
   margin-top: -80px;

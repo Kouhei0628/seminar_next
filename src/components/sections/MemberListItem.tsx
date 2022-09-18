@@ -2,7 +2,6 @@ import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints/breakpoints";
 import members from "../../data/members";
-import { PubUrl } from "../../data/PubUrl";
 
 interface Props {
   id: number;
@@ -21,14 +20,8 @@ const MemberListItem: React.FC<Props> = ({ id, name }) => {
     <MemberListItemS ref={ref}>
       <div className='list-wrap'>
         <ImageWrap>
-          <MembersGear
-            src={`${PubUrl}/img/members/mem_icon.svg`}
-            alt={`歯車`}
-          />
-          <MemberIcon
-            src={`${PubUrl}/img/members/member/m-${id}.jpg`}
-            alt={`${name}`}
-          />
+          <MembersGear src={`/img/members/mem_icon.svg`} alt={`歯車`} />
+          <MemberIcon src={`/img/members/member/m-${id}.jpg`} alt={`${name}`} />
         </ImageWrap>
         <MemberNameS className={`${inView ? "show" : ""}`}>{name}</MemberNameS>
       </div>

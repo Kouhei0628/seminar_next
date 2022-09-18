@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colors } from "../../data/colors";
-import { PubUrl } from "../../data/PubUrl";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import StoryText from "./StoryText";
 
@@ -41,7 +40,7 @@ const CloudWrapper = styled.div`
 `;
 
 export const StCloudTop = styled.div`
-  background-image: url(${PubUrl}/img/story/story_bg-top.png?ver=1.0.0);
+  background-image: url(/img/story/story_bg-top.png?ver=1.0.0);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -53,12 +52,12 @@ export const StCloudTop = styled.div`
   }
 `;
 const StCloudBottom = styled(StCloudTop)`
-  background-image: url(${PubUrl}/img/story/story_bg-bottom.png?ver=1.0.0);
+  background-image: url(/img/story/story_bg-bottom.png?ver=1.0.0);
 `;
 
 const StoryContent = styled.div`
   width: 90%;
-  background-image: url(${PubUrl}/img/story/story_bg.png?ver=1.0.0);
+  background-image: url(/img/story/story_bg.png?ver=1.0.0);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

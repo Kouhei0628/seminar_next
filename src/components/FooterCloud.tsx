@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { breakpoints } from "../breakpoints/breakpoints";
-import { PubUrl } from "../data/PubUrl";
 
 const FooterCloud: React.FC = () => {
   const twitterLink: string = "https://twitter.com/kaishizemi2022";
@@ -8,10 +7,7 @@ const FooterCloud: React.FC = () => {
     <FooterCloudWrap>
       <a href={twitterLink} target='_blank' rel='noreferrer'>
         <div>
-          <img
-            src={`${PubUrl}/img/footer/foot_twitter.svg`}
-            alt={`Twitterロゴ`}
-          />
+          <img src={`/img/footer/foot_twitter.svg`} alt={`Twitterロゴ`} />
           <span>@kaishizemi2022</span>
         </div>
       </a>
@@ -21,7 +17,7 @@ const FooterCloud: React.FC = () => {
 export default FooterCloud;
 
 const FooterCloudWrap = styled.div`
-  background-image: url(${PubUrl}/img/footer/foot_smoke.png);
+  background-image: url(/img/footer/foot_smoke.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { PubUrl } from "../../data/PubUrl";
 
 type Props = {
   isLeft?: boolean;
@@ -54,7 +53,7 @@ const GearWrap = styled.div.attrs((pr: GearProps) => ({
 const GearObj = styled.div.attrs((pr: GearProps) => ({
   style: {
     animation: `gearRotate ${pr.speed}s linear infinite`,
-    backgroundImage: `url(${PubUrl}/img/gears/gear_${pr.type}.svg?ver=1.0.0)`,
+    backgroundImage: `url(/img/gears/gear_${pr.type}.svg?ver=1.0.0)`,
   },
 }))<GearProps>`
   background-repeat: no-repeat;

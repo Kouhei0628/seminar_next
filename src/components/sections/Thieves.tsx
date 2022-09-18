@@ -2,7 +2,6 @@ import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints/breakpoints";
 import thieves from "../../data/coats";
-import { PubUrl } from "../../data/PubUrl";
 import HeaderOrn from "../ornaments/HeaderOrn";
 
 const Thieves: React.FC = () => {
@@ -36,7 +35,7 @@ const Thieves: React.FC = () => {
               <ThieveImg
                 nth={thief.id}
                 className={`${inView ? "visible" : ""}`}
-                src={`${PubUrl}/img/thieves/thieves_emb${thief.id}.jpg`}
+                src={`/img/thieves/thieves_emb${thief.id}.jpg`}
                 alt={thief.alt}
               />
               <ThievesName>
@@ -62,7 +61,7 @@ const ThievesSection = styled.section`
 `;
 
 const Subtitle = styled.div`
-  background-image: url(${PubUrl}/img/thieves/thieves_titlebg.svg);
+  background-image: url(/img/thieves/thieves_titlebg.svg);
   background-position: center;
   background-repeat: no-repeat;
   margin: 20px auto;
@@ -83,7 +82,7 @@ const ThievesDescr = styled.div`
     content: "";
     margin: 8px 0;
   }
-  background-image: url(${PubUrl}/img/thieves/thieves_descbg-s.svg);
+  background-image: url(/img/thieves/thieves_descbg-s.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -125,7 +124,7 @@ const ThievesDescr = styled.div`
     }
   }
   @media (min-width: 450px) {
-    background-image: url(${PubUrl}/img/thieves/thieves_descbg-m.svg);
+    background-image: url(/img/thieves/thieves_descbg-m.svg);
     width: 85%;
     height: calc(114px + 9vw);
     p {
@@ -145,14 +144,14 @@ const ThievesDescr = styled.div`
   }
   @media (min-width: ${breakpoints.l}) {
     height: calc(156px + 3vw);
-    background-image: url(${PubUrl}/img/thieves/thieves_descbg-l.svg);
+    background-image: url(/img/thieves/thieves_descbg-l.svg);
     p {
       font-size: 12px;
     }
   }
 `;
 const ThievesContent = styled.div`
-  background-image: url(${PubUrl}/img/thieves/thieves_listbg-m.svg);
+  background-image: url(/img/thieves/thieves_listbg-m.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -165,10 +164,10 @@ const ThievesContent = styled.div`
   align-items: center;
   @media (min-width: ${breakpoints.m}) {
     width: 90%;
-    background-image: url(${PubUrl}/img/thieves/thieves_listbg-l.svg);
+    background-image: url(/img/thieves/thieves_listbg-l.svg);
   }
   @media (min-width: ${breakpoints.l}) {
-    background-image: url(${PubUrl}/img/thieves/thieves_listbg-xl.svg);
+    background-image: url(/img/thieves/thieves_listbg-xl.svg);
   }
 `;
 const ThievesList = styled.ul`
@@ -219,7 +218,7 @@ const ThieveImg = styled.img`
   }
 `;
 const ThievesName = styled.div`
-  background-image: url(${PubUrl}/img/common_titlebg.svg);
+  background-image: url(/img/common_titlebg.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

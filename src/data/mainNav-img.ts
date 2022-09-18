@@ -5,37 +5,37 @@ const navImages: Data[] = [
     id: 1,
     name: "物語",
     ref: "story",
-    alt: "aaaa",
+    alt: "物語",
   },
   {
     id: 2,
     name: "怪盗団",
     ref: "thieves",
-    alt: "bbbb",
+    alt: "怪盗団",
   },
   {
     id: 3,
     name: "概要",
     ref: "summary",
-    alt: "cccc",
+    alt: "概要",
   },
   {
     id: 4,
     name: "地図",
     ref: "location",
-    alt: "dddd",
+    alt: "地図",
   },
   {
     id: 5,
     name: "団員",
     ref: "members",
-    alt: "eeee",
+    alt: "団員",
   },
   {
     id: 6,
     name: "？？？",
     ref: "hidden",
-    alt: "ffff",
+    alt: "？？？",
   },
 ];
 export default navImages;

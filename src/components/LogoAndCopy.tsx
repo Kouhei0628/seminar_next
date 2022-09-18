@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import { breakpoints } from "../breakpoints/breakpoints";
-import { PubUrl } from "../data/PubUrl";
 
 const LogoAndCopy: React.FC = () => {
   return (
     <LogoAndCopyS>
-      <img
-        src={`${PubUrl}/img/header/header_logocopy.png?ver=1.0.1`}
-        alt='メインロゴ'
-      />
+      <img src={`/img/header/header_logocopy.png?ver=1.0.1`} alt='メインロゴ' />
     </LogoAndCopyS>
   );
 };

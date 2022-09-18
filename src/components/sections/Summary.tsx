@@ -2,7 +2,6 @@ import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints/breakpoints";
 import { colors } from "../../data/colors";
-import { PubUrl } from "../../data/PubUrl";
 import summaries from "../../data/summaries";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import { StCloudTop } from "./Story";
@@ -23,7 +22,7 @@ const Summary: React.FC = () => {
                   <SumImg
                     nth={summary.id}
                     className={`${inView ? "visible" : ""}`}
-                    src={`${PubUrl}/img/summary/sum_${summary.img}.svg`}
+                    src={`/img/summary/sum_${summary.img}.svg`}
                     alt={`${summary.alt}の画像`}
                   />
                   <Title>
@@ -57,10 +56,10 @@ const CloudWrap = styled.div`
   overflow-x: hidden;
 `;
 const CloudTop = styled(StCloudTop)`
-  background-image: url(${PubUrl}/img/summary/summary_bg-top.png);
+  background-image: url(/img/summary/summary_bg-top.png);
 `;
 const CloudBottom = styled(StCloudTop)`
-  background-image: url(${PubUrl}/img/summary/summary_bg-bottom.png);
+  background-image: url(/img/summary/summary_bg-bottom.png);
 `;
 const SummWrap = styled.div`
   background-color: ${colors.summaryBg};
@@ -131,7 +130,7 @@ const SumImg = styled.img`
 
 const SummaryMessage = styled.div`
   transform: translateZ(0);
-  background-image: url(${PubUrl}/img/summary/summary-mess_bg.png?ver=1.0.0);
+  background-image: url(/img/summary/summary-mess_bg.png?ver=1.0.0);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -162,7 +161,7 @@ const SummaryContents = styled.div`
   }
 `;
 const Title = styled.div`
-  background-image: url(${PubUrl}/img/common_titlebg.svg);
+  background-image: url(/img/common_titlebg.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -178,7 +177,7 @@ const Title = styled.div`
   }
 `;
 const Description = styled.div`
-  background-image: url(${PubUrl}/img/summary/sum_descbg.svg);
+  background-image: url(/img/summary/sum_descbg.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

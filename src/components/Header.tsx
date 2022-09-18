@@ -2,10 +2,9 @@ import React from "react";
 import { useContext } from "react";
 import styled from "styled-components";
 import { breakpoints } from "../breakpoints/breakpoints";
+import { LoadingContext } from "../context/LoadingContext";
 import { colors } from "../data/colors";
-import { PubUrl } from "../data/PubUrl";
 import CloudPicture from "./CloudPicture";
-import { LoadingContext } from "./Home";
 import LogoAndCopy from "./LogoAndCopy";
 
 const Header: React.FC = React.memo(() => {
@@ -17,7 +16,7 @@ const Header: React.FC = React.memo(() => {
         <ProvVisual>
           <img
             className={`${isLoaded ? "visible" : ""}`}
-            src={`${PubUrl}/img/header/header_main.png?ver=1.0.2`}
+            src={`/img/header/header_main.png?ver=1.0.2`}
             alt='メインヴィジュアル'
           />
         </ProvVisual>
@@ -32,12 +31,12 @@ const Header: React.FC = React.memo(() => {
         <HeaderVisual>
           <img
             className={`header_visual ${isLoaded ? "visible" : ""}`}
-            src={`${PubUrl}/img/header/header_main.png?ver=1.0.2`}
+            src={`/img/header/header_main.png?ver=1.0.2`}
             alt='メインヴィジュアル'
           />
           <img
             className='blur'
-            src={`${PubUrl}/img/header/header_blur.png?ver=1.0.2`}
+            src={`/img/header/header_blur.png?ver=1.0.2`}
             alt='ぼかし画像'
           />
         </HeaderVisual>
@@ -54,7 +53,7 @@ const HeaderWrap = styled.div`
   text-align: center;
 `;
 const TopmostCloud = styled.div`
-  background-image: url(${PubUrl}/img/story/story_bg-top.png?ver=1.0.1);
+  background-image: url(/img/story/story_bg-top.png?ver=1.0.1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -93,7 +92,7 @@ const CloudWrap = styled.div`
   }
 `;
 const CloudTop = styled.div`
-  background-image: url(${PubUrl}/img/story/story_bg-top.png?ver=1.0.1);
+  background-image: url(/img/story/story_bg-top.png?ver=1.0.1);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
@@ -106,7 +105,7 @@ const CloudTop = styled.div`
   }
 `;
 const CloudBottom = styled(CloudTop)`
-  background-image: url(${PubUrl}/img/story/story_bg-bottom.png?ver=1.0.1);
+  background-image: url(/img/story/story_bg-bottom.png?ver=1.0.1);
   background-size: cover;
   background-position: center bottom;
   display: block;

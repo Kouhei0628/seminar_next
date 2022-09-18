@@ -1,17 +1,13 @@
 import { useContext } from "react";
 import styled from "styled-components";
-import { PubUrl } from "../data/PubUrl";
-import { LoadingContext } from "./Home";
+import { LoadingContext } from "../context/LoadingContext";
 
 const Loading: React.FC = () => {
   const [isLoaded] = useContext(LoadingContext);
   return (
     <LoadWrap className={`${isLoaded ? "hidden" : ""}`}>
       <div>
-        <img
-          src={`${PubUrl}/img/header/header_logo.png`}
-          alt={`ロード中のロゴ`}
-        />
+        <img src={`/img/header/header_logo.png`} alt={`ロード中のロゴ`} />
       </div>
       <h2>Loading...</h2>
     </LoadWrap>
@@ -21,7 +17,7 @@ export default Loading;
 
 const LoadWrap = styled.div`
   background-color: #2c2825;
-  background-image: url(${PubUrl}/img/background/all-bg_gear2.png?ver=1.0.1);
+  background-image: url(/img/background/all-bg_gear2.png?ver=1.0.1);
   background-repeat: repeat;
   background-size: 90px;
   background-position: center;
@@ -48,7 +44,7 @@ const LoadWrap = styled.div`
     width: 70vw;
     height: 40vw;
     margin: 0 auto;
-    background-image: url(${PubUrl}/img/loading.png?ver=1.0.1);
+    background-image: url(/img/loading.png?ver=1.0.1);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

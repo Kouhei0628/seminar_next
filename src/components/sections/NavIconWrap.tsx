@@ -1,12 +1,11 @@
+import Link from "next/link";
 import { useContext } from "react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints/breakpoints";
+import { NaviContext } from "../../context/NaviContext";
 import { colors } from "../../data/colors";
 import navImages from "../../data/mainNav-img";
-import { PubUrl } from "../../data/PubUrl";
-import { RefContext, SetRefContext } from "../Home";
 
 interface Props {
   itemRef: string;
@@ -15,23 +14,21 @@ interface Props {
 
 const FixNavListItem: React.FC<Props> = ({ itemRef, alt }) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
-  const vRef = useContext(RefContext);
-  const setRef = useContext(SetRefContext);
-
+  const [ref, setRef] = useContext(NaviContext);
   useEffect(() => {
-    if (itemRef === vRef) {
+    if (itemRef === ref) {
       setIsSelected(true);
     } else {
       setIsSelected(false);
     }
-  }, [itemRef, vRef]);
+  }, [itemRef, ref]);
   return (
     <FixNavListItemS className={`${isSelected ? "selected" : ""}`}>
-      <Link onClick={() => setRef(itemRef)} to={`/#${itemRef}`}>
+      <Link onClick={() => setRef(itemRef)} href={`/#${itemRef}`}>
         <NavIconWrap>
           <NavIcon
             className={`navicon`}
-            src={`${PubUrl}/img/navigation/fix/fix_${itemRef}.png?ver=1.0.0`}
+            src={`/img/navigation/fix/fix_${itemRef}.png?ver=1.0.0`}
             alt={`${alt}`}
           />
         </NavIconWrap>

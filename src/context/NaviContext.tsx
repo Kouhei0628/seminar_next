@@ -6,7 +6,7 @@ const NaviContext = createContext<[string, Dispatch<SetStateAction<string>>]>([
 ]);
 
 const NaviProvider = ({ children }) => {
-  const [ref, setRef] = useState();
+  const [ref, setRef] = useState<string>("");
   return (
     <NaviContext.Provider value={[ref, setRef]}>
       {children}

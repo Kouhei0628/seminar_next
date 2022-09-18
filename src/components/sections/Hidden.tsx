@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints/breakpoints";
 import { colors } from "../../data/colors";
-import { PubUrl } from "../../data/PubUrl";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import TimeComp from "./TimeComp";
 
@@ -31,9 +30,9 @@ const HeaderDescWrap = styled.div`
   margin-top: 70px;
   margin-bottom: 380px;
   transform: translateZ(0);
-  background-image: url(${PubUrl}/img/hidden/hidden_descbg_s.svg);
+  background-image: url(/img/hidden/hidden_descbg_s.svg);
   @media (min-width: ${breakpoints.m}) {
-    background-image: url(${PubUrl}/img/hidden/hidden_descbg.svg);
+    background-image: url(/img/hidden/hidden_descbg.svg);
   }
   background-repeat: no-repeat;
   background-size: contain;

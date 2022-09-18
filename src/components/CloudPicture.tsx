@@ -1,13 +1,12 @@
 import { breakpoints } from "../breakpoints/breakpoints";
 import styled from "styled-components";
-import { PubUrl } from "../data/PubUrl";
 
 const CloudPicture: React.FC = () => {
   return (
     <PictureStyle>
       <picture className='for-pc'>
         <img
-          src={`${PubUrl}/img/header/header_bganime-p.png?ver=1.0.1`}
+          src={`/img/header/header_bganime-p.png?ver=1.0.1`}
           width='1920'
           height='1080'
           alt='雲の流れる動画'
@@ -16,7 +15,7 @@ const CloudPicture: React.FC = () => {
       </picture>
       <picture className='for-mobile'>
         <img
-          src={`${PubUrl}/img/header/header_bganime-m.png?ver=1.0.1`}
+          src={`/img/header/header_bganime-m.png?ver=1.0.1`}
           width='1920'
           height='1080'
           alt='雲の流れる動画'

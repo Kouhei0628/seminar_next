@@ -10,11 +10,14 @@
     },
     "dependencies": {
         "@types/styled-components": "^5.1.26",
+        "css-loader": "^6.7.1",
         "gsap": "^3.11.1",
         "next": "12.3.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-intersection-observer": "^9.4.0",
+        "sass": "^1.54.9",
+        "style-loader": "^3.3.1",
         "styled-components": "^5.3.5",
         "use-media": "^1.4.0"
     },

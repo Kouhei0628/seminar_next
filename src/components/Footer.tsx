@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { breakpoints } from "../breakpoints/breakpoints";
-import { PubUrl } from "../data/PubUrl";
 import FooterCloud from "./FooterCloud";
 
 const Footer: React.FC = React.memo(() => {
@@ -38,7 +37,7 @@ const FooterSl = styled.div`
   overflow-x: hidden;
   overflow-y: visible;
   & > div {
-    background-image: url(${PubUrl}/img/footer/foot_sl.png);
+    background-image: url(/img/footer/foot_sl.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;

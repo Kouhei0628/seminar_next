@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { PubUrl } from "../../data/PubUrl";
 
 type Props = {
   logo: string;
@@ -12,7 +11,7 @@ const HeaderOrn: React.FC<Props> = ({ logo }) => {
         className={`${
           logo === "thieves" || logo === "hidden" ? "thieves" : ""
         }`}
-        src={`${PubUrl}/img/logos/logo_${logo}-000.svg`}
+        src={`/img/logos/logo_${logo}-000.svg`}
         alt={`${logo}のロゴ`}
       />
     </HeaderWrap>
@@ -24,7 +23,7 @@ const HeaderWrap = styled.div`
   margin: 0 auto;
   margin-bottom: 50px;
   width: calc(171px + 3vw);
-  background-image: url(${PubUrl}/img/common_ribbon.png);
+  background-image: url(/img/common_ribbon.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

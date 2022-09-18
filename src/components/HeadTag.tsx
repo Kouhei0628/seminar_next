@@ -6,7 +6,7 @@ const HeadTag = () => {
       <meta charSet='utf-8' />
       <link
         rel='shortcut icon'
-        href='/favicon2.ico?ver=1.0.0'
+        href='/img/favicon2.ico?ver=1.0.0'
         type='image/x-icon'
         key={`shortcuticon`}
       />
@@ -18,7 +18,7 @@ const HeadTag = () => {
       />
       <link
         rel='apple-touch-icon-precomposed'
-        href='%PUBLIC_URL%/img/favicon2.png?ver=1.0.0'
+        href='/img/favicon2.png?ver=1.0.0'
         key='apple-touch-icon-precomposed'
       />
       <meta

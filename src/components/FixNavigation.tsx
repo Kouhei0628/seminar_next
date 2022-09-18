@@ -1,31 +1,30 @@
 import { useEffect, useState } from "react";
 import { useMedia } from "use-media";
 import { breakpoints } from "../breakpoints/breakpoints";
-import { PubUrl } from "../data/PubUrl";
 import navImages from "../data/mainNav-img";
 import { colors } from "../data/colors";
-import { userAgentFlags } from "../data/userAgentFlags";
 import styled from "styled-components";
 import FixNavListItem from "./sections/NavIconWrap";
 import Link from "next/link";
+import Image from "next/image";
+import style from "../../styles/FixNavigation.module.scss";
 
 const FixNavigation: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const isNarrow: boolean = useMedia({ minWidth: breakpoints.m });
 
   const toggleVisibility = (): void => {
-    const UA = userAgentFlags;
+    const scrolledToBottom: boolean =
+      window.scrollY >
+      document.querySelector("body")!.getBoundingClientRect().bottom * 3;
+
     // 1200pxスクロールしたら表示する
     if (!isNarrow) {
       // for mobile
       window.scrollY > 650 ? setIsVisible(true) : setIsVisible(false);
-      if (
-        window.scrollY >
-        document.getElementById("root")!.getBoundingClientRect().bottom * 3
-      )
-        setIsVisible(false);
+      if (scrolledToBottom) setIsVisible(false);
     } else {
-      if (UA.youScrollToBottom) {
+      if (scrolledToBottom) {
         // for narrow desktop
         setIsVisible(true);
         window.scrollY > 1000 ? setIsVisible(true) : setIsVisible(false);
@@ -42,14 +41,17 @@ const FixNavigation: React.FC = () => {
 
   return (
     <div>
-      <FixSNSIcon className={`${isVisible ? "visible" : ""}`}>
+      <div className={style.snsIcon + `${isVisible ? "visible" : ""}`}>
         <Link href={twiLink} target={`_blank`} rel='noreferrer'>
-          <img
-            src={`${PubUrl}/img/navigation/fix/fix_twitter.svg`}
-            alt={`Twitterアイコン`}
-          />
+          <a>
+            <Image
+              layout={`fill`}
+              src={`/img/navigation/fix/fix_twitter.svg`}
+              alt={`Twitterアイコン`}
+            />
+          </a>
         </Link>
-      </FixSNSIcon>
+      </div>
       <FixWrap className={`fix-nav ${isVisible ? "visible" : ""}`}>
         <FixNavList>
           {navImages.map(ni => (
@@ -62,33 +64,6 @@ const FixNavigation: React.FC = () => {
 };
 export default FixNavigation;
 
-const FixSNSIcon = styled.div`
-  position: fixed;
-  bottom: calc(58px + 10vw);
-  right: 13px;
-  width: 68px;
-  height: 68px;
-  z-index: 400;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-  transform: translateX(100%) rotate(90deg);
-  &.visible {
-    opacity: 0.8;
-    visibility: visible;
-    transform: translateX(0) rotate(0deg);
-  }
-  button {
-    width: 100%;
-    height: 100%;
-    img {
-      width: 100%;
-    }
-  }
-  @media (min-width: ${breakpoints.m}) {
-    display: none;
-  }
-`;
 const FixWrap = styled.div`
   position: -webkit-fixed;
   position: fixed;
