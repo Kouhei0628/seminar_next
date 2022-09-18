@@ -16,7 +16,7 @@ const FixNavigation: React.FC = () => {
   const toggleVisibility = (): void => {
     const scrolledToBottom: boolean =
       window.scrollY >
-      document.querySelector("body")!.getBoundingClientRect().bottom * 3;
+      document.querySelector("body").getBoundingClientRect().bottom * 3;
 
     // 1200pxスクロールしたら表示する
     if (!isNarrow) {
@@ -41,7 +41,7 @@ const FixNavigation: React.FC = () => {
 
   return (
     <div>
-      <div className={style.snsIcon + `${isVisible ? "visible" : ""}`}>
+      <div className={`${style.snsIcon} ${isVisible ? "visible" : ""}`}>
         <a href={twiLink} target={"_blank"} rel='noopener noreferrer'>
           <Image
             width={90}

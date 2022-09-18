@@ -1,0 +1,186 @@
+.section {
+    margin: 0px auto;
+    width: 100vw;
+    @media (min-width: 940px) {
+        margin: -252px auto 0 auto;
+    }
+}
+
+.cloudWrap {
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+.summWrap {
+    background-color: #928261;
+    margin-top: -30px;
+    margin-bottom: -80px;
+}
+
+.summMessage {
+    transform: translateZ(0);
+    background-image: url(/img/summary/summary-mess_bg.png?ver=1.0.0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    &.visible {
+        opacity: 1;
+    }
+    @media (min-width: 508px) {
+        height: calc(250px + 8vw);
+    }
+    @media (min-width: 630px) {
+        height: calc(250px + 8vw);
+    }
+}
+
+.summContents {
+    margin: -50px auto 0 auto;
+    width: 100%;
+    @media (min-width: 630px) {
+        width: 90%;
+    }
+    &__list {
+        transform: translateZ(0);
+        padding: 0;
+        margin: 0 auto;
+        width: 90%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        li {
+            width: 45%;
+            overflow: hidden;
+            @media (min-width: 630px) {
+                width: 20%;
+            }
+            &:nth-child(1),
+             :nth-child(2) {
+                .summary-desc {
+                    p {
+                        font-size: 3.5vw;
+                        @media (min-width: 630px) {
+                            font-size: 1.3vw;
+                        }
+                    }
+                }
+            }
+        }
+        @media (min-width: 630px) {
+            transform: translateY(-50px);
+            width: 84%;
+        }
+    }
+}
+
+.image {
+    width: 100%;
+    transform: translateX(100%);
+    margin-bottom: 15px;
+    &.visible {
+        -webkit-animation: slideIn 1.5s ease-in-out forwards;
+        animation: slideIn 1.5s ease-in-out forwards;
+    }
+}
+
+.title {
+    background-image: url(/img/common_titlebg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    p {
+        margin: 0;
+        color: white;
+        display: inline-block;
+        transform: translateY(-1px);
+    }
+}
+
+.description {
+    background-image: url(/img/summary/sum_descbg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: calc(25px + 10vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    p {
+        margin: 0;
+        font-size: 9px;
+        width: max(87%, 150px);
+        font-weight: 600;
+        span {
+            color: #c30000;
+        }
+        @media (min-width: 377px) {
+            font-size: 12px;
+        }
+        @media (min-width: 630px) {
+            font-size: 9px;
+        }
+        @media (min-width: 1018px) {
+            font-size: 12px;
+        }
+    }
+    @media (min-width: 630px) {
+        height: calc(15px + 5vw);
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(0%) rotate(0deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    90% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(0%) rotate(0deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    90% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

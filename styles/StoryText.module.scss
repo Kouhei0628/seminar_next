@@ -1,0 +1,12 @@
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    font-size: calc(9px + 0.5vw);
+    font-weight: 700;
+    .text-sep {
+        display: block;
+        content: "";
+        margin: 10px 0;
+    }
+}

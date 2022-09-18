@@ -1,0 +1,25 @@
+.logoAndCopy {
+    height: 100%;
+    width: 100%;
+    @media (min-width: 630px) {
+        margin-top: 0;
+    }
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 50% !important;
+        @media (min-width: 630px) {
+            width: 48%;
+        }
+        @media (min-width: 1024px) {
+            width: 40%;
+        }
+        @media (min-width: 1360px) {
+            width: 30%;
+        }
+    }
+}

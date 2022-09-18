@@ -1,0 +1,109 @@
+.wrap {
+    transform: translateZ(0);
+    margin: -110px auto 0 auto;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    @media (min-width: 630px) {
+        width: 89%;
+    }
+    @media (min-width: 940px) {
+        margin: -252px auto 0 auto;
+    }
+}
+
+.flexWrap {
+    @media (min-width: 790px) {
+        display: flex;
+        gap: 12px;
+    }
+}
+
+.text {
+    background-image: url(/img/location/loc_txtbg.svg?ver=1.0.0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 4vw 0;
+    color: white;
+    @media (min-width: 630px) {
+        width: 80%;
+    }
+    h4 {
+        margin: 0;
+        font-size: 3.5vw;
+        @media (min-width: 630px) {
+            font-size: 2.5vw;
+        }
+        @media (min-width: 790px) {
+            font-size: 1.5vw;
+        }
+        @media (min-width: 1024px) {
+            font-size: 1.2vw;
+        }
+    }
+}
+
+.adress {
+    width: 82%;
+    height: 50px;
+    margin: 10px auto 0 auto;
+    background-image: url(/img/location/loc_txtbg2-2.svg?ver=1.0.0);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 630px) {
+        background-image: url(/img/location/loc_txtbg2.svg?ver=1.0.0);
+    }
+    p {
+        font-size: 12px;
+        @media (min-width: 1024px) {
+            font-size: calc(5px + 0.5vw);
+        }
+    }
+}
+
+.map {
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-filter: blur(15px);
+            filter: blur(15px);
+    width: 90%;
+    img {
+        width: 100%;
+    }
+    &.visible {
+        -webkit-animation: mapFadeIn 1.9s linear forwards;
+                animation: mapFadeIn 1.9s linear forwards;
+    }
+}
+
+@-webkit-keyframes mapFadeIn {
+    0% {
+        -webkit-filter: blur(15px);
+                filter: blur(15px);
+    }
+    100% {
+        -webkit-filter: blur(0);
+                filter: blur(0);
+    }
+}
+
+@keyframes mapFadeIn {
+    0% {
+        -webkit-filter: blur(15px);
+                filter: blur(15px);
+    }
+    100% {
+        -webkit-filter: blur(0);
+                filter: blur(0);
+    }
+}
