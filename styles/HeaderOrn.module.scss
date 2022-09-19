@@ -13,12 +13,14 @@
     align-items: center;
     transform: translateZ(0);
     position: relative;
+    span {
+        position: relative;
+    }
 }
 
 .image {
-    width: 25%;
-    transform: translateY(-7px);
+    transform: translateY(-7px) scale(0.3);
     &.thieves {
-        width: 37%;
+        transform: translateY(-7px) scale(0.4);
     }
 }

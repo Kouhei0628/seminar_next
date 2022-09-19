@@ -1,0 +1,148 @@
+@mixin nth($i) {
+    @if $i % 5==0 {
+        width: calc(100% / 2);
+        .name {
+            transform: translateX(0px);
+        }
+        @media (min-width: 377px) {
+            justify-content: flex-start;
+            .name {
+                right: 0;
+                transform: translateX(calc(70px - 29vw)) !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            width: calc(100% / 5);
+            justify-content: center;
+            .name {
+                left: 40%;
+                transform: translateX(0);
+            }
+        }
+    }
+    @else {
+        @media (min-width: 1024px) {
+            width: calc(100% / 5);
+            justify-content: center;
+            .name {
+                right: initial;
+                transform: translateX(0);
+            }
+        }
+    }
+    @if ($i + 1) % 5==0 {
+        width: calc(100% / 2);
+        justify-content: flex-end;
+        .name {
+            transform: translateX(calc(0px));
+        }
+        @media (min-width: 377px) {
+            .name {
+                right: 0;
+                transform: translateX(calc(-37px + 8vw));
+            }
+        }
+    }
+    @else {
+        @media (min-width: 377px) {
+            .name {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.listItem {
+    width: 33%;
+    margin-bottom: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    .list-wrap {
+        width: 100%;
+    }
+    .name {
+        transform: translateX(0);
+        right: unset;
+    }
+    @media (max-width: 297px) {
+        width: 100%;
+    }
+    @media (max-width: 377px) {
+        width: 50%;
+    }
+    @media (min-width: 630px) {
+        width: calc(100% / 5);
+    }
+    @media (max-width: 630px) {
+        // aaa
+        @for $i from 1 through 25 {
+            &:nth-child(#{$i}) {
+                @include nth($i);
+            }
+        }
+    }
+    &.inview {
+        transform: translateY(-50px);
+    }
+}
+
+.imgWrap {
+    position: relative;
+    width: 150px;
+    height: 110px;
+}
+
+.gear {
+    width: 68%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.icon {
+    width: 33%;
+    position: absolute;
+    top: 45px;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.name {
+    position: absolute;
+    z-index: 6;
+    bottom: 16px;
+    left: 40%;
+    right: initial;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    &.visible {
+        -webkit-animation: textIn 1s ease-in-out forwards;
+        animation: textIn 1s ease-in-out forwards;
+    }
+}
+
+@-webkit-keyframes textIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes textIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

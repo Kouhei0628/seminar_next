@@ -18,12 +18,7 @@
     visibility: visible;
     transition: all ease-in-out 0.5s;
     transition-delay: 1s;
-    opacity: 0;
-    &.hidden {
-        opacity: 0;
-        visibility: hidden;
-        display: none;
-    }
+    opacity: 1;
     &__cloud {
         width: 70vw;
         height: 40vw;
@@ -45,6 +40,11 @@
         font-size: 25px;
         color: #e4e4e4;
     }
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 @-webkit-keyframes fadeIn {

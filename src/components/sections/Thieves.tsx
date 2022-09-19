@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import thieves from "../../data/coats";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import style from "../../../styles/Thieves.module.scss";
+import Image from "next/image";
 
 const Thieves: React.FC = () => {
   const { ref, inView } = useInView({
@@ -15,7 +16,7 @@ const Thieves: React.FC = () => {
         <h3>怪盗団とは</h3>
       </div>
       <div className={style.description}>
-        <p className={`${inView ? "inview" : ""}`}>
+        <p className={`${inView ? style.descText__inview : style.descText}`}>
           フェルミアはアトミシアとの侵略戦争に敗北した。
           <br />
           <br />
@@ -31,9 +32,11 @@ const Thieves: React.FC = () => {
         <ul className={style.list} ref={ref}>
           {thieves.map(thief => (
             <li key={thief.id}>
-              <img
+              <Image
+                width={2726 * 0.6}
+                height={3700 * 0.6}
                 style={{ animationDelay: `${thief.id * 0.2}s` }}
-                className={`${style.image} ${inView ? "visible" : ""}`}
+                className={`${inView ? style.image__visible : style.image}`}
                 src={`/img/thieves/thieves_emb${thief.id}.jpg`}
                 alt={thief.alt}
               />

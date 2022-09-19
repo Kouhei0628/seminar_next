@@ -1,53 +1,18 @@
 import React from "react";
-import styled from "styled-components";
 import { breakpoints } from "../breakpoints/breakpoints";
 import FooterCloud from "./FooterCloud";
+import style from "../../styles/Footer.module.scss";
 
 const Footer: React.FC = React.memo(() => {
   return (
-    <FooterWrap className='footer'>
-      <FooterInner>
+    <div className={`footer ${style.wrap}`}>
+      <div className={style.wrap__inner}>
         <FooterCloud />
-        <FooterSl>
+        <div className={style.sl}>
           <div></div>
-        </FooterSl>
-      </FooterInner>
-    </FooterWrap>
+        </div>
+      </div>
+    </div>
   );
 });
 export default Footer;
-
-const FooterWrap = styled.div`
-  width: 100%;
-  height: calc(220px + 8vw);
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  z-index: 3;
-`;
-const FooterInner = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-`;
-
-const FooterSl = styled.div`
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: visible;
-  & > div {
-    background-image: url(/img/footer/foot_sl.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center bottom;
-    transform: scale(1.7);
-    transform-origin: center bottom;
-    width: 100%;
-    height: 100%;
-    @media (min-width: ${breakpoints.m}) {
-      background-size: contain;
-      transform: scale(1);
-    }
-  }
-`;

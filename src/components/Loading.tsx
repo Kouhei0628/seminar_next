@@ -7,7 +7,7 @@ import style from "../../styles/Loading.module.scss";
 const Loading: React.FC = () => {
   const [isLoaded] = useContext(LoadingContext);
   return (
-    <div className={`${style.wrap} ${isLoaded ? "hidden" : ""}`}>
+    <div className={`${style.wrap} ${isLoaded ? style.hidden : ""}`}>
       <div className={style.wrap__cloud}>
         <Image
           width={1415}
