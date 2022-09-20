@@ -20,8 +20,6 @@ const MemberListItem: React.FC<Props> = ({ id, name }) => {
         <div className={style.imgWrap}>
           <img
             className={style.gear}
-            // width={196}
-            // height={163}
             src={`/img/members/mem_icon.svg`}
             alt={`歯車`}
           />
