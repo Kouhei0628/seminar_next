@@ -4,7 +4,7 @@ import style from "../../../styles/Story.module.scss";
 import { useInView } from "react-intersection-observer";
 
 const Story: React.FC = () => {
-  const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
   return (
     <section ref={ref} className={style.section}>
       <div className={style.cloudWrap}>
