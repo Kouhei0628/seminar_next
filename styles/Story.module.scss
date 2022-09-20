@@ -33,4 +33,9 @@
     @media (min-width: 340px) {
         padding: 90px 0;
     }
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    &.inview {
+        opacity: 1;
+    }
 }

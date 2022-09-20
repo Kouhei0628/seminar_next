@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import style from "../../../styles/Ornaments.module.scss";
+import style from "../../../styles/Gears.module.scss";
 
 type Props = {
   isLeft?: boolean;
@@ -23,7 +23,11 @@ const Gears: React.FC<Props> = ({ isLeft }) => {
     type: random(1, 18),
     speed: random(55, 78),
   };
-  const [gears, setGears] = useState<Gears>(gearState);
+  const [gears, setGears] = useState<Gears>({});
+
+  useEffect(() => {
+    if (typeof window !== "undefined") setGears(gearState);
+  }, []);
 
   return (
     <>
@@ -39,7 +43,7 @@ const Gears: React.FC<Props> = ({ isLeft }) => {
           className={style.obj}
           style={{
             animationDuration: `${gears.speed}s`,
-            backgroundImage: `url(/img/gears/gear_${gears.type}.svg?ver=1.0.0)`,
+            backgroundImage: `url("/img/gears/gear_${gears.type}.svg?ver=1.0.0")`,
           }}></div>
       </div>
     </>

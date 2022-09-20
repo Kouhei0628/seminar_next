@@ -2,7 +2,8 @@
     display: inline-block;
     visibility: hidden;
     opacity: 0;
-    &.inview {
+    &.visible {
+        opacity: 0;
         -webkit-animation: textIn1 1s ease-in forwards 0.4s;
         animation: textIn1 1s ease-in forwards 0.4s;
     }

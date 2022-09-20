@@ -13,7 +13,9 @@ const StoryEachText: React.FC<Props> = ({ children }) => {
     triggerOnce: true,
   });
   return (
-    <span ref={ref} className={`${style.fadeIn} ${inView ? "inview" : ""}`}>
+    <span
+      ref={ref}
+      className={`${style.fadeIn} ${inView ? style.visible : ""}`}>
       {children}
     </span>
   );

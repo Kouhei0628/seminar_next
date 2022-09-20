@@ -6,7 +6,7 @@ const Members: React.FC = () => {
   return (
     <section className={style.wrap}>
       <div className={style.cloudWrap}>
-        <div className='members cloud__top' />
+        <div className='members cloud cloud__top' />
         <div className={style.membersWrap} id='members'>
           <HeaderOrn logo='members' />
           <MembersContent />

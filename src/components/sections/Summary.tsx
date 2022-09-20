@@ -4,19 +4,21 @@ import { colors } from "../../data/colors";
 import summaries from "../../data/summaries";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import style from "../../../styles/Summary.module.scss";
+import Image from "next/image";
 
 const Summary: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
   return (
     <section className={style.section}>
       <div className={style.cloudWrap}>
-        <div className={`cloud__top summary`} />
+        <div className={`cloud cloud__top summary`} />
         <div className={style.summWrap} id='summary'>
           <HeaderOrn logo='summary' />
           <div
             ref={ref}
-            className={`${style.summMessage} ${inView ? "visible" : ""}`}
-          />
+            className={`${style.summMessage} ${
+              inView ? style.inview : ""
+            }`}></div>
           <div className={style.summContents}>
             <ul className={style.summContents__list}>
               {summaries.map(summary => (
@@ -25,7 +27,7 @@ const Summary: React.FC = () => {
                     style={{
                       animationDelay: `${0.5 + summary.id * 0.1}s`,
                     }}
-                    className={`${style.image} ${inView ? "visible" : ""}`}
+                    className={`${inView ? style.image__inview : style.image}`}
                     src={`/img/summary/sum_${summary.img}.svg`}
                     alt={`${summary.alt}の画像`}
                   />
@@ -40,7 +42,7 @@ const Summary: React.FC = () => {
             </ul>
           </div>
         </div>
-        <div className={`cloud__bottom summary`} />
+        <div className={`cloud cloud__bottom summary`} />
       </div>
     </section>
   );

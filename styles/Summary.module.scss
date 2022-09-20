@@ -32,7 +32,7 @@
     align-items: center;
     opacity: 0;
     transition: opacity 2s ease-in-out;
-    &.visible {
+    &.inview {
         opacity: 1;
     }
     @media (min-width: 508px) {
@@ -88,7 +88,8 @@
     width: 100%;
     transform: translateX(100%);
     margin-bottom: 15px;
-    &.visible {
+    &__inview {
+        transform: translateX(100%);
         -webkit-animation: slideIn 1.5s ease-in-out forwards;
         animation: slideIn 1.5s ease-in-out forwards;
     }

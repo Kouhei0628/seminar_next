@@ -1,0 +1,34 @@
+.section {
+    margin: 0 auto;
+    padding-bottom: 80px;
+    width: 100%;
+    background-color: #7b6747;
+}
+
+.description {
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 380px;
+    transform: translateZ(0);
+    background-image: url(/img/hidden/hidden_descbg_s.svg);
+    @media (min-width: 630px) {
+        background-image: url(/img/hidden/hidden_descbg.svg);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        margin: 0;
+        font-size: 13px;
+        color: #ce2424;
+        @media (min-width: 630px) {
+            font-size: 15px;
+        }
+    }
+}

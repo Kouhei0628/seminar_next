@@ -10,7 +10,7 @@ const Ornaments = React.memo(() => {
   const gearAmount: string[] = [...Array(100).fill("")];
   const option = {
     scrollTrigger: {
-      trigger: ".under-navi",
+      trigger: ".under_navi",
       start: "top bottom",
       end: "1500 bottom",
       scrub: true,

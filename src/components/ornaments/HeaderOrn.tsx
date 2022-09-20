@@ -9,9 +9,10 @@ const HeaderOrn: React.FC<Props> = ({ logo }) => {
   return (
     <div className={style.wrap}>
       <Image
-        layout='fill'
+        width={277}
+        height={151}
         className={`${style.image} ${
-          logo === "thieves" || logo === "hidden" ? "thieves" : ""
+          logo === "thieves" || logo === "hidden" ? style.thieves : ""
         }`}
         src={`/img/logos/logo_${logo}-000.svg`}
         alt={`${logo}のロゴ`}
