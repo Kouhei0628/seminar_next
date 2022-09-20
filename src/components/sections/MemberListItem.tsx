@@ -1,8 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import { breakpoints } from "../../breakpoints/breakpoints";
-import members from "../../data/members";
 import style from "../../../styles/MemberListItem.module.scss";
-import Image from "next/image";
 
 interface Props {
   id: number;
@@ -30,8 +27,6 @@ const MemberListItem: React.FC<Props> = ({ id, name }) => {
           />
           <img
             className={style.icon}
-            // width={200}
-            // height={200}
             src={`/img/members/member/m-${id}.jpg`}
             alt={`${name}`}
           />
@@ -42,57 +37,3 @@ const MemberListItem: React.FC<Props> = ({ id, name }) => {
   );
 };
 export default MemberListItem;
-
-// const arrangeAlternatelyStyle: string[] = members
-//   .filter(m => m.id % 5 === 0 || (m.id + 1) % 5 === 0)
-//   .map(
-//     m =>
-//       `
-//     &:nth-child(${m.id}) {
-//       width: calc(100% / 2);
-//       justify-content: flex-${m.id % 5 === 0 ? "start" : "end"};
-//       .list-wrap {
-//         width: auto;
-//         p {
-//           ${
-//             m.id % 5 === 0
-//               ? "left: 0; transform: translateX(65px);"
-//               : "right: unset;"
-//           }
-//         }
-//       }
-//       @media (max-width: 298px) {
-//         width: 100%;
-//         .list-wrap {
-//           p {
-//             left: 40%;
-//             right: unset;
-//             transform: translateX(0);
-//           }
-//         }
-//       }
-//       @media (max-width: 377px) {
-//         justify-content: center;
-//         width: 50%;
-//       }
-//       @media (min-width: 377px) {
-//         p {
-//           transform: translateX(${
-//             (m.id + 1) % 5 === 0 ? "calc(-38px + 18vw)" : "0"
-//           });
-//         }
-//       }
-//       @media (min-width: ${breakpoints.l}) {
-//         width: calc(100% / 5);
-//         justify-content: center;
-//         .list-wrap p {
-//           ${
-//             m.id % 5 === 0
-//               ? "left: 40%; transform: translateX(0)"
-//               : "right: initial; transform: translateX(0);"
-//           }
-
-//         }
-//       }
-//     }`
-//   );
