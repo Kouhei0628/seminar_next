@@ -14,9 +14,10 @@ const Header: React.FC = React.memo(() => {
         <div className={style.toptopCloud}></div>
         <div className={style.provVisual}>
           <Image
-            width={3600}
-            height={1800}
-            className={`${isLoaded ? "visible" : ""}`}
+            layout='fill'
+            objectFit='contain'
+            quality={100}
+            className={`${style.provImg} ${isLoaded ? style.visible : ""}`}
             src={`/img/header/header_main.png?ver=1.0.2`}
             alt='メインヴィジュアル'
           />
@@ -30,21 +31,25 @@ const Header: React.FC = React.memo(() => {
           <div className={style.cloudWrap__bottom} />
         </div>
         <div className={style.headerVisual}>
-          <Image
-            width={3600}
-            height={1800}
-            className={`header_visual ${isLoaded ? "visible" : ""}`}
-            src={`/img/header/header_main.png?ver=1.0.2`}
-            alt='メインヴィジュアル'
-          />
-          <Image
-            layout='responsive'
-            width={804}
-            height={208}
-            className='blur'
-            src={`/img/header/header_blur.png?ver=1.0.2`}
-            alt='ぼかし画像'
-          />
+          <div className={style.headerVisual_wrap}>
+            <Image
+              layout='fill'
+              objectFit='contain'
+              priority
+              className={`${style.header_visual} ${
+                isLoaded ? style.visible : ""
+              }`}
+              src={`/img/header/header_main.png?ver=1.0.2`}
+              alt='メインヴィジュアル'
+            />
+          </div>
+          <div className={style.blur_wrap}>
+            <Image
+              layout='fill'
+              src={`/img/header/header_blur.png?ver=1.0.2`}
+              alt='ぼかし画像'
+            />
+          </div>
         </div>
       </div>
     </header>

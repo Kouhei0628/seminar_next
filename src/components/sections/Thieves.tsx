@@ -13,9 +13,9 @@ const Thieves: React.FC = () => {
     <section className={style.wrap} id='thieves'>
       <HeaderOrn logo='thieves' />
       <div className={style.subTitle}>
-        <h3>怪盗団とは</h3>
+        <h3>怪盗団とは？</h3>
       </div>
-      <div className={style.description}>
+      <div className={`${style.description} ${inView ? style.inview : ""}`}>
         <p className={`${inView ? style.descText__inview : style.descText}`}>
           フェルミアはアトミシアとの侵略戦争に敗北した。
           <br />
@@ -28,13 +28,14 @@ const Thieves: React.FC = () => {
           怪盗団を運営することでアトミシアへの復讐を目論んだ。
         </p>
       </div>
-      <div className={style.content}>
-        <ul className={style.list} ref={ref}>
+      <div className={`${style.content} ${inView ? style.inview : ""}`}>
+        <ul className={`${style.list}`} ref={ref}>
           {thieves.map(thief => (
             <li key={thief.id}>
               <Image
-                width={2726 * 0.6}
-                height={3700 * 0.6}
+                width={2726}
+                height={3700}
+                quality={60}
                 style={{ animationDelay: `${thief.id * 0.2}s` }}
                 className={`${inView ? style.image__visible : style.image}`}
                 src={`/img/thieves/thieves_emb${thief.id}.jpg`}

@@ -6,7 +6,7 @@
     background-position: center;
     position: fixed;
     z-index: 800;
-    overflow: hidden;
+    overflow: visible;
     top: 0;
     left: 0;
     width: 100vw;
@@ -20,18 +20,23 @@
     transition-delay: 1s;
     opacity: 1;
     &__cloud {
-        width: 70vw;
-        height: 40vw;
+        width: 75vw;
+        height: 39vw;
         margin: 0 auto;
+        position: relative;
         background-image: url(/img/loading.png?ver=1.0.1);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        img {
-            width: 52%;
+        @media (min-width: 630px) {
+            width: 50vw;
+            height: 26vw;
+        }
+        &__img {
+            transform: scale(0.5);
             -webkit-animation: fadeIn 0.3s ease-in-out;
             animation: fadeIn 0.3s ease-in-out;
         }
@@ -45,6 +50,19 @@
 .hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+.loading {
+    span {
+        @for $i from 1 through 6 {
+            &:nth-of-type(#{$i}) {
+                -webkit-animation: loading 0.8s linear infinite;
+                animation: loading 0.8s linear infinite;
+                -webkit-animation-delay: $i * 0.1s;
+                animation-delay: $i * 0.1s;
+            }
+        }
+    }
 }
 
 @-webkit-keyframes fadeIn {
@@ -69,6 +87,30 @@
     to {
         -webkit-filter: blur(0);
         filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50.1% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50.1% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }

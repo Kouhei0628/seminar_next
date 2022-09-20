@@ -10,13 +10,20 @@ const Loading: React.FC = () => {
     <div className={`${style.wrap} ${isLoaded ? style.hidden : ""}`}>
       <div className={style.wrap__cloud}>
         <Image
-          width={1415}
-          height={714}
+          className={style.wrap__cloud__img}
+          layout='fill'
           src={`/img/header/header_logo.png`}
           alt={`ロード中のロゴ`}
         />
       </div>
-      <h2>Loading...</h2>
+      <h2 className={style.loading}>
+        Loading<span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </h2>
     </div>
   );
 };

@@ -1,5 +1,10 @@
 .content {
     margin-top: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    &.inview {
+        opacity: 1;
+    }
 }
 
 .list {

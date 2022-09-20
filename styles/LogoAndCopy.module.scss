@@ -1,6 +1,7 @@
 .logoAndCopy {
     height: 100%;
     width: 100%;
+    overflow: hidden;
     @media (min-width: 630px) {
         margin-top: 0;
     }
@@ -21,5 +22,43 @@
         @media (min-width: 1360px) {
             width: 30%;
         }
+    }
+}
+
+.imgWrap {
+    position: relative;
+    width: 70%;
+    height: 60%;
+    opacity: 0;
+    transform: translateY(100%);
+    &.inview {
+        -webkit-animation: slowSlideIn 2.8s ease-in-out forwards 1s;
+        animation: slowSlideIn 2.8s ease-in-out forwards 1s;
+    }
+}
+
+.image {
+    width: 100%;
+}
+
+@-webkit-keyframes slowSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slowSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
     }
 }

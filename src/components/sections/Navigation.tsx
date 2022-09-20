@@ -13,19 +13,22 @@ const Navigation: React.FC = () => {
       <div className={style.navigation__wrap}>
         <ul className={style.list}>
           {navImages.map(ni => (
-            <li key={ni.id}>
+            <li key={ni.id} className={style.item}>
               <Scroll
                 className={style.scroll}
                 style={{ position: "relative" }}
-                to={`/#${ni.ref}`}
+                to={ni.ref}
                 onClick={() => setRef(ni.ref)}
-                smooth={true}>
-                <Image
-                  layout='fill'
-                  className={style.navIcon}
-                  src={`/img/navigation/nav_${ni.ref}.png`}
-                  alt={ni.alt}
-                />
+                smooth>
+                <div className={style.imgWrap}>
+                  <Image
+                    layout='fill'
+                    objectFit='contain'
+                    className={style.navIcon}
+                    src={`/img/navigation/nav_${ni.ref}.png`}
+                    alt={ni.alt}
+                  />
+                </div>
               </Scroll>
             </li>
           ))}
