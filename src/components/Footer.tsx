@@ -1,5 +1,4 @@
 import React from "react";
-import { breakpoints } from "../breakpoints/breakpoints";
 import FooterCloud from "./FooterCloud";
 import style from "../../styles/Footer.module.scss";
 

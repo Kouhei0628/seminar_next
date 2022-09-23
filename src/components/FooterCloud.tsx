@@ -1,4 +1,3 @@
-import { breakpoints } from "../breakpoints/breakpoints";
 import style from "../../styles/FooterCloud.module.scss";
 
 const FooterCloud: React.FC = () => {

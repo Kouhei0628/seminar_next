@@ -1,4 +1,3 @@
-import { breakpoints } from "../../breakpoints/breakpoints";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import TimeComp from "./TimeComp";
 import style from "../../../styles/Hidden.module.scss";

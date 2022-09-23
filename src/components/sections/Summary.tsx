@@ -1,10 +1,7 @@
 import { useInView } from "react-intersection-observer";
-import { breakpoints } from "../../breakpoints/breakpoints";
-import { colors } from "../../data/colors";
 import summaries from "../../data/summaries";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import style from "../../../styles/Summary.module.scss";
-import Image from "next/image";
 
 const Summary: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });

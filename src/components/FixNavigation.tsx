@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { useMedia } from "use-media";
-import { breakpoints } from "../breakpoints/breakpoints";
 import navImages from "../data/mainNav-img";
 import FixNavListItem from "./sections/FixNavListItem";
 import style from "../../styles/FixNavigation.module.scss";

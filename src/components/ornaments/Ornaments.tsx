@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect } from "react";
-import styled from "styled-components";
 import Gears from "./Gears";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";

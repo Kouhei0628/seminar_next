@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useContext } from "react";
-import styled from "styled-components";
 import { LoadingContext } from "../context/LoadingContext";
 import style from "../../styles/Loading.module.scss";
 

@@ -1,5 +1,4 @@
 import { useInView } from "react-intersection-observer";
-import { breakpoints } from "../../breakpoints/breakpoints";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import style from "../../../styles/Location.module.scss";
 
