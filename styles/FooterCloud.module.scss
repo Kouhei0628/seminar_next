@@ -21,30 +21,21 @@
     }
     @media (min-width: 630px) {
         display: flex;
-        width: 100%;
-        height: 75px;
         transition: all 0.2s ease-in-out;
-        transform: translate(calc(-40% - 5vw), calc(250% - 10vw));
+        width: 330px;
+        height: 75px;
+        transform: translate(calc(-30% - 5vw), calc(250% - 10vw));
         &:hover {
-            transform: translate(calc(-40% - 5vw), calc(250% - 10vw)) scale(1.1);
+            transform: translate(calc(-30% - 5vw), calc(250% - 10vw)) scale(1.1);
         }
     }
     @media (min-width: 918px) {
-        width: 100%;
-        height: 75px;
+        width: 430px;
+        height: calc(90px + 1vw);
         transition: all 0.2s ease-in-out;
-        transform: translate(calc(-45% - 5vw), calc(250% - 10vw));
+        transform: translate(calc(-35% - 5vw), calc(190% - 10vw));
         &:hover {
-            transform: translate(calc(-45% - 5vw), calc(250% - 10vw)) scale(1.1);
-        }
-    }
-    @media (min-width: 630px) {
-        width: 530px;
-        height: 95px;
-        transform: translate(-50%, calc(200% - 10vw));
-        transition: all 0.2s ease-in-out;
-        &:hover {
-            transform: translate(-50%, calc(200% - 10vw)) scale(1.1);
+            transform: translate(calc(-35% - 5vw), calc(190% - 10vw)) scale(1.1);
         }
     }
 }

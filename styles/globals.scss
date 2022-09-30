@@ -18,6 +18,16 @@ html {
     text-align: center;
 }
 
+::-moz-selection {
+    background-color: rgba($color: #2c2825, $alpha: 0.8);
+    color: #c2b190;
+}
+
+::selection {
+    background-color: rgba($color: #2c2825, $alpha: 0.8);
+    color: #c2b190;
+}
+
 @supports (-webkit-touch-callout: none) {
     body {
         height: -webkit-fill-available;

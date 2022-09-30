@@ -74,7 +74,7 @@
         width: 85%;
         height: calc(114px + 9vw);
         p {
-            font-size: 11px;
+            font-size: 10px;
             width: calc(100% - 11vw);
         }
     }
@@ -86,7 +86,6 @@
     }
     @media (min-width: 800px) {
         height: 200px;
-        /* max-width: 500px; */
     }
     @media (min-width: 1024px) {
         height: calc(156px + 3vw);
