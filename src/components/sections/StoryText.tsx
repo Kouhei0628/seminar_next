@@ -4,13 +4,15 @@ import style from "../../../styles/StoryText.module.scss";
 const StoryText: React.FC = () => {
   return (
     <p className={style.wrap}>
-      <StoryEachText key={1}>私はヴェルスラミナに通う生徒。</StoryEachText>
+      <StoryEachText key={1}>
+        私は怪盗育成学校、ヴェルスラミナに通う生徒。
+      </StoryEachText>
       <br className='text-sep' />
       <br className='text-sep' />
       <StoryEachText key={2}>
         ヴェルスラミナとは
         <br />
-        アトミシアに復讐を目論む
+        先進国アトミシアに復讐を目論む
         <br />
         組織アウロラが運営している
         <br />
@@ -39,7 +41,9 @@ const StoryText: React.FC = () => {
       <br className='text-sep' />
       <br className='text-sep' />
       <StoryEachText key={5}>
-        中を見てみるとゼニス号の乗車券と
+        中を見てみると
+        <br />
+        世界初の旅客鉄道「ゼニス号」の乗車券と
         <br />
         一枚の書類が入っており
         <br />

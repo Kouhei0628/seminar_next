@@ -17,7 +17,7 @@ const Thieves: React.FC = () => {
       </div>
       <div className={`${style.description} ${inView ? style.inview : ""}`}>
         <p className={`${inView ? style.descText__inview : style.descText}`}>
-          フェルミアはアトミシアとの侵略戦争に敗北した。
+          我々の母国、フェルミアはアトミシアとの侵略戦争に敗北した。
           <br />
           <br />
           才能をもった科学者たちはアトミシアの貴族に囚われ、貴族の元で新しい発明に貢献することを余儀なくされてしまった。
