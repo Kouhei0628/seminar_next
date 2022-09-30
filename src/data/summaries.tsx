@@ -11,7 +11,7 @@ const summaries: Summaries[] = [
   {
     id: 1,
     img: "time",
-    alt: "タイマー",
+    alt: "時間制限",
     title: "時間制限",
     description: (
       <p>
@@ -22,7 +22,7 @@ const summaries: Summaries[] = [
   {
     id: 2,
     img: "people",
-    alt: "帽子",
+    alt: "人数",
     title: "人数",
     description: (
       <p>
@@ -33,7 +33,7 @@ const summaries: Summaries[] = [
   {
     id: 3,
     img: "point",
-    alt: "鍵",
+    alt: "ポイント",
     title: "ポイント",
     description: (
       <p>
@@ -44,7 +44,7 @@ const summaries: Summaries[] = [
   {
     id: 4,
     img: "location",
-    alt: "蒸気機関車",
+    alt: "場所",
     title: "場所",
     description: (
       <p>
