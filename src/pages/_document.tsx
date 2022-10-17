@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
           <meta name='twitter:card' content='summary_large_image' />
           <meta
             name='twitter:image'
-            content='https://www.kaitonoyaen.com/img/header/header_main.png?ver=1.0.0'
+            content='https://kaitonoyaen.com/img/header/header_main.png?ver=1.0.0'
           />
           <meta
             name='twitter:description'
