@@ -1,8 +1,8 @@
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
+import style from "../../../styles/Thieves.module.scss";
 import thieves from "../../data/coats";
 import HeaderOrn from "../ornaments/HeaderOrn";
-import style from "../../../styles/Thieves.module.scss";
-import Image from "next/image";
 
 const Thieves: React.FC = () => {
   const { ref, inView } = useInView({

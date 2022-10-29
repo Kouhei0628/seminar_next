@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { LoadingContext } from "../context/LoadingContext";
 import style from "../../styles/Loading.module.scss";
+import { LoadingContext } from "../context/LoadingContext";
 
 const Loading: React.FC = () => {
   const [isLoaded] = useContext(LoadingContext);
@@ -13,6 +13,7 @@ const Loading: React.FC = () => {
           layout='fill'
           src={`/img/header/header_logo.png`}
           alt={`ロード中のロゴ`}
+          priority
         />
       </div>
       <h2 className={style.loading}>

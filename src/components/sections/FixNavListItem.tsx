@@ -1,9 +1,8 @@
-import { Link as Scroll } from "react-scroll";
-import { useContext } from "react";
-import { useEffect, useState } from "react";
-import { NaviContext } from "../../context/NaviContext";
-import style from "../../../styles/FixNavListItem.module.scss";
 import Image from "next/image";
+import { useContext, useEffect, useState } from "react";
+import { Link as Scroll } from "react-scroll";
+import style from "../../../styles/FixNavListItem.module.scss";
+import { NaviContext } from "../../context/NaviContext";
 
 interface Props {
   itemRef: string;

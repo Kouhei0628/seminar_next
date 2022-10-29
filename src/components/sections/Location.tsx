@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
-import HeaderOrn from "../ornaments/HeaderOrn";
 import style from "../../../styles/Location.module.scss";
+import HeaderOrn from "../ornaments/HeaderOrn";
 
 const Location: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });

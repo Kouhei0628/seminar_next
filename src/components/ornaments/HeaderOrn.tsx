@@ -16,6 +16,7 @@ const HeaderOrn: React.FC<Props> = ({ logo }) => {
         }`}
         src={`/img/logos/logo_${logo}-000.svg`}
         alt={`${logo}のロゴ`}
+        priority
       />
     </div>
   );

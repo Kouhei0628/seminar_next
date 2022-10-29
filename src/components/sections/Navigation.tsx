@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Link as Scroll } from "react-scroll";
 import { useContext } from "react";
+import { Link as Scroll } from "react-scroll";
+import style from "../../../styles/Navigation.module.scss";
 import { NaviContext } from "../../context/NaviContext";
 import navImages from "../../data/mainNav-img";
-import style from "../../../styles/Navigation.module.scss";
 
 const Navigation: React.FC = () => {
   const [, setRef] = useContext(NaviContext);

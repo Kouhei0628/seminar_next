@@ -1,7 +1,7 @@
+import { useInView } from "react-intersection-observer";
+import style from "../../../styles/Story.module.scss";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import StoryText from "./StoryText";
-import style from "../../../styles/Story.module.scss";
-import { useInView } from "react-intersection-observer";
 
 const Story: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });

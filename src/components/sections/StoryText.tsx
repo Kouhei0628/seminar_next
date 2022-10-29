@@ -1,5 +1,5 @@
-import StoryEachText from "./StoryEachText";
 import style from "../../../styles/StoryText.module.scss";
+import StoryEachText from "./StoryEachText";
 
 const StoryText: React.FC = () => {
   return (

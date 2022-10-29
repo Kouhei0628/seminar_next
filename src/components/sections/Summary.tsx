@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
+import style from "../../../styles/Summary.module.scss";
 import summaries from "../../data/summaries";
 import HeaderOrn from "../ornaments/HeaderOrn";
-import style from "../../../styles/Summary.module.scss";
 
 const Summary: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });

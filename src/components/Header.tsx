@@ -1,16 +1,15 @@
 import Image from "next/image";
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
+import style from "../../styles/Header.module.scss";
 import { LoadingContext } from "../context/LoadingContext";
 import CloudPicture from "./CloudPicture";
 import LogoAndCopy from "./LogoAndCopy";
-import style from "../../styles/Header.module.scss";
 
 const Header: React.FC = React.memo(() => {
   const [isLoaded, setIsLoaded] = useContext(LoadingContext);
   return (
-    <header className={style.header}>
-      <div className={style.header_wrap} onLoad={() => setIsLoaded(true)}>
+    <header className={style.header} onLoad={() => setIsLoaded(true)}>
+      <div className={style.header_wrap}>
         <div className={style.toptopCloud}></div>
         <div className={style.provVisual}>
           <Image

@@ -14,6 +14,7 @@ const LogoAndCopy: React.FC = () => {
           className={`${style.image}`}
           src={`/img/header/header_logocopy.png?ver=1.0.1`}
           alt='メインロゴ'
+          priority
         />
       </div>
     </div>

@@ -1,6 +1,6 @@
+import style from "../../../styles/Members.module.scss";
 import HeaderOrn from "../ornaments/HeaderOrn";
 import MembersContent from "./MembersContent";
-import style from "../../../styles/Members.module.scss";
 
 const Members: React.FC = () => {
   return (

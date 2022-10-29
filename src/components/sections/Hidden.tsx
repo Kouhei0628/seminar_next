@@ -1,12 +1,11 @@
-import HeaderOrn from "../ornaments/HeaderOrn";
-import TimeComp from "./TimeComp";
+import { useContext } from "react";
 import style from "../../../styles/Hidden.module.scss";
 import { RestContext, RestProvider } from "../../context/RestContext";
-import { useContext } from "react";
 import { answers } from "../../data/answers";
+import HeaderOrn from "../ornaments/HeaderOrn";
 
 const Hidden = () => {
-  const [, differ] = useContext(RestContext);
+  const [time, differ] = useContext(RestContext);
   return (
     <RestProvider>
       <div className={style.section} id='hidden'>
@@ -15,7 +14,10 @@ const Hidden = () => {
           <div className={style.description}>
             <p>CS祭終了後に解放されます。</p>
             <p>
-              解放まであと <TimeComp />
+              解放まであと{" "}
+              <span>
+                {time.d} 日 {time.h} 時間 {time.m} 分
+              </span>
             </p>
           </div>
         ) : (

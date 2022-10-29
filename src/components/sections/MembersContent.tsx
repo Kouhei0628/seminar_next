@@ -1,7 +1,7 @@
+import { useInView } from "react-intersection-observer";
+import style from "../../../styles/MembersContent.module.scss";
 import members from "../../data/members.json";
 import MemberListItem from "./MemberListItem";
-import style from "../../../styles/MembersContent.module.scss";
-import { useInView } from "react-intersection-observer";
 
 type Member = { id: number; name: string };
 
@@ -9,7 +9,7 @@ type Members = (
   context: any
 ) => Promise<{ members: { membersList: Member[] } }>;
 
-export const getStaticProps: Members = async context => {
+export const getStaticProps: Members = async () => {
   return { members };
 };
 
